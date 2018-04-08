@@ -4,65 +4,66 @@
   		Here is the demo of vue-fullcalendar, no jquery fullcalendar.js required!
   	</p>
     <full-calendar class="test-fc" :events="fcEvents" 
-      first-day='1' locale="fr"
+      first-day='1' locale="zh-cn"
       @changeMonth="changeMonth"
       @eventClick="eventClick"
       @dayClick="dayClick"
       @moreClick="moreClick">
         <template slot="fc-event-card" scope="p">
-            <p><i class="fa">sadfsd</i> {{ p.event.title }} test</p>
+            <p>{{ p.event.title }}</p>
         </template>
     </full-calendar>
   </div>
 </template>
+
 <script>
 let demoEvents = [
     {
       title    : 'Sunny 725-727',
-      start    : '2017-02-25',
-      end      : '2017-02-27',
+      start    : '2018-02-25',
+      end      : '2018-02-27',
       cssClass : 'family'
     },
     {
       title : 'Lunfel 726-727',
-      start : '2017-02-26',
-      end : '2017-02-27',
+      start : '2018-02-26',
+      end : '2018-02-27',
       cssClass : ['home', 'work']
     },
     {
       title : 'Lunfel 2/27-2/28',
-      start : '2017-02-27',
-      end : '2017-02-28'
+      start : '2018-02-27',
+      end : '2018-02-28'
     },
     {
         title : 'Lunfel 2/27-2/28',
-        start : '2017-02-27',
-        end : '2017-02-28'
+        start : '2018-02-27',
+        end : '2018-02-28'
     },
     {
         title : 'Lunfel 2/27-2/28',
-        start : '2017-02-27',
-        end : '2017-02-28'
+        start : '2018-02-27',
+        end : '2018-02-28'
     },
     {
         title : 'Lunfel 2/26-3/05',
-        start : '2017-02-26',
-        end : '2017-03-05'
+        start : '2018-02-26',
+        end : '2018-03-05'
     },
     {
         title : 'Lunfel 1/27-1/28',
-        start : '2017-01-27',
-        end : '2017-01-28'
+        start : '2018-01-27',
+        end : '2018-01-28'
     },
     {
         title : 'Lunfel 1/27-2/2',
-        start : '2017-01-27',
-        end : '2017-02-02'
+        start : '2018-01-27',
+        end : '2018-02-02'
     },
     {
         title : 'Lunfel 3/27-3/28',
-        start : '2017-03-27',
-        end : '2017-03-28'
+        start : '2018-03-27',
+        end : '2018-03-28'
     },
   ];
 
@@ -95,5 +96,12 @@ export default {
 <style lang='scss'>
   .app{
     color:green;
+  }
+</style>
+
+
+<style>
+  *, *:after, *:before {
+    box-sizing: border-box;
   }
 </style>

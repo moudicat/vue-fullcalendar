@@ -61,6 +61,7 @@
   .header-center{
     flex:3;
     text-align:center;
+    user-select: none;
     .title{
       margin: 0 10px;
     }
