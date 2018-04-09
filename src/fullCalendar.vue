@@ -46,9 +46,8 @@
               <p class="day-number">{{day.monthDay}}</p>
               <div class="event-box">
                 <event-card :event="event" :date="day.date" :firstDay="firstDay" v-for="(event, j) in day.events" :key="j" v-show="event.cellIndex <= eventLimit" @click="eventClick">
-                  <template scope="p">
-                    <slot name="fc-event-card" :event="p.event"></slot>
-                  </template>
+                  <slot name="fc-event-card" slot-scope="props" :event="event"></slot>
+                  <p>{{ event.title }}</p>
                 </event-card>
                 <p v-if="day.events.length > eventLimit"
                    class="more-link" @click.stop="selectThisDay(day, $event)">
@@ -264,7 +263,6 @@ export default {
     localeWeekDay(weekday, firstDay, locale) {
       firstDay = parseInt(firstDay);
       const localMoment = moment().locale(locale);
-      console.log(localMoment.localeData().weekdaysShort()[(weekday + firstDay) % 7]);
       return localMoment.localeData().weekdaysShort()[(weekday + firstDay) % 7];
     }
   }

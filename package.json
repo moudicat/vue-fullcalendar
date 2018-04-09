@@ -1,6 +1,6 @@
 {
   "name": "vue-fullcalendar",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "author": "Reddy Huang, Sunny Wang",
   "license": "MIT",
   "description": "pure vue-based fullcalendar, no jquery moment required",
@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "es6-promise": "^4.0.5",
-    "vue": "^2.1.8",
     "vue-fullcalendar": "^1.0.5"
   },
   "devDependencies": {
@@ -47,8 +46,8 @@
     "strip-loader": "^0.1.2",
     "style-loader": "^0.13.0",
     "uglify-js": "^2.4.24",
-    "vue-loader": "^10.0.2",
-    "vue-template-compiler": "^2.1.8",
+    "vue-loader": "^10.3.0",
+    "vue-template-compiler": "2.5.2",
     "webpack": "^1.12.8",
     "webpack-dev-server": "^1.12.0"
   },

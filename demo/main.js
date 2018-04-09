@@ -9,7 +9,7 @@ import App from './app'
 //   }
 // })
 
-new Vue({
+const a = new Vue({
   el : '#app',
   render: h => h(App),
   template : '<App/>',
@@ -19,3 +19,4 @@ new Vue({
 });
 
 
+window.a = a;

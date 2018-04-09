@@ -9,9 +9,7 @@
       @eventClick="eventClick"
       @dayClick="dayClick"
       @moreClick="moreClick">
-        <template slot="fc-event-card" scope="p">
-            <p>{{ p.event.title }}</p>
-        </template>
+        
     </full-calendar>
   </div>
 </template>
@@ -71,9 +69,14 @@ export default {
 	data () {
 		return {
             name:'Sunny!',
-            fcEvents : demoEvents
+            fcEvents : []
         }
 	},
+  mounted() {
+    setTimeout(() => {
+      this.fcEvents.push(...demoEvents);
+    }, 2000);
+  },
   methods : {
     'changeMonth' (start, end, current) {
       console.log('changeMonth', start.format(), end.format(), current.format())
